@@ -1,0 +1,12 @@
+这是一个小的httpd
+
+Linux下C++写的。
+
+    用法：
+    app port [workingDir] [router]
+    port是必须的参数
+    workingDIR是工作目录，可选，默认是当前路径
+    router是调度器，可选。若设置router，则workingDIR必须设置，此时，所有目录、可执行文件、不存在的文件和目录 都转由router处理。若未设置router，则router默认为app，此时，所有不存在的文件或目录返回error，静态文件返回自身，可执行文件返回标准输出，目录则显示目录下的文件和子目录。
+
+可执行文件可以通过环境变量获得GET参数、POST参数（若是上传文件，则通过标准输入获取请求体）和请求头信息（包括cookie，已解析），请求方法、路径、工作目录可以通过环境变量method、path和pwdpwd获得。支持keepalive。
+
