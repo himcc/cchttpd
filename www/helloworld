@@ -1,0 +1,9 @@
+#!/bin/sh
+
+printf "HTTP/1.1 200 OK\r\n"
+printf "Content-Type: text/html\r\n"
+printf "Connection: Keep-Alive\r\n"
+printf "Content-Length: 12\r\n"
+printf "\r\n"
+printf "Hello world."
+exit 0

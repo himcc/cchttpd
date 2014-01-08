@@ -1,0 +1,11 @@
+#!/bin/sh
+
+var=$a
+len=${#var}
+printf "HTTP/1.1 200 OK\r\n"
+printf "Content-Type: text/html\r\n"
+printf "Connection: Keep-Alive\r\n"
+printf "Content-Length: %d\r\n" $len
+printf "\r\n"
+echo -n $var
+exit 0
